@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+        
+        <style>
+            .im {
+                color: #000;
+            }
+    
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+    
+            .a3s {
+                font-family: 'Nunito', sans-serif;
+            }
+
+            .content-email {
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+
+            .content-email span {
+                font-weight: 600;
+                color: rgba(34, 139, 34, 1);
+            }
+
+            .wrap {
+                background-color: rgba(48, 113, 174, 0.2);
+                width: 80%;
+                margin: auto;
+                padding: 50px 100px;
+            }
+    
+            .invoice-wrap {
+                background-color: white;
+                border-radius: 3px;
+                padding: 40px;
+                border: 10px dotted  rgba(48, 113, 174, 0.5);
+            }
+    
+            .invoice-header {
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(48, 113, 174, 0.2);
+                width: 100%;
+            }
+    
+            .invoice-header .last-td {
+                text-align: end;
+            }
+    
+            .title {
+                height: fit-content;
+                font-size: 32px;
+            }
+    
+            .logo {
+                height: 100px;
+                background-color: rgb(5, 91, 167);
+                /* width: 100px; */
+            }
+    
+            .date-mahd {
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(48, 113, 174, 0.2);
+                width: 100%;
+            }
+    
+            .date-mahd .last-td {
+                text-align: end;
+            }
+    
+            .infor {
+                padding: 20px 0;     
+            }
+    
+            .infor-table {
+                width: 100%;
+            }
+            .infor-table td {
+                padding: 5px 0;
+            }
+            .infor-col1 {
+                width: 17%;
+            }
+    
+            .infor-col2 {
+                width: 33%;
+            }
+            .invoice-table {
+                width: 100%;
+            }
+    
+            .invoice-table th,
+            .invoice-table td {
+                padding: 10px 0;
+            }
+    
+            .invoice-table th {
+                background-color: rgba(48, 113, 174, 0.2);
+            }
+    
+            .invoice-table td {
+                text-align: center;
+            }
+    
+            .invoice-table tr {
+                outline: 1px solid rgba(48, 113, 174, 0.2);
+            }
+    
+            .invoice-table img {
+                width: 60%;
+            }
+            .masp {
+                width: 10%;
+            }
+    
+            .img-sp{
+                width: 20%;
+            }
+    
+            .name-sp{
+                width: 30%;
+            }
+    
+            .sl-sp{
+                width: 15%;
+            }
+    
+            .dg-sp{
+                width: 25%;
+            }
+    
+            .footer {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: 600;
+                width: fit-content;
+                margin-left: auto;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <h2 class="title-email">AppleDunk xin gửi lời chào thân thương đến quý khách hàng.</h2>
+        <p class="content-email">Cảm ơn bạn vì đã mua hàng tại AppleDunk. 
+            Hy vọng bạn sẽ có trải nghiệm tuyệt vời khi sử dụng sản phẩm của chúng tôi. 
+            Rất mong sẽ tiếp tục nhận được sự ủng hộ của bạn trong thời gian tới.
+        </br> <span>
+            ShopDunk xin phép gửi hóa đơn đến bạn ạ.
+        </span>
+        </p>
+        <div class="wrap">
+                <div class="invoice-wrap">
+                    <table class="invoice-header">
+                        <tr>
+                            <td class="title">Hóa Đơn</td>
+                            <td><div class="empty"></div></td>
+                            <td class="last-td"> <img class="logo" src="./logo.png" alt=""></td>
+                        </tr>
+                    </table>
+                    <table class="date-mahd">
+                        <tr>
+                            <td>Ngày xuất hóa đơn: 05/05/2023</td>
+                            <td><div class="empty"></div></td>
+                            <td class="last-td">Mã hóa đơn: HD01</td>
+                        </tr>
+                    </table>
+                    <div class="infor">
+                        <h3>Thông tin hóa đơn</h3>
+                        <table class="infor-table">
+                            <tr>
+                                <th class="infor-col1"></th>
+                                <th class="infor-col2"></th>
+                                <th class="infor-col1"></th>
+                                <th class="infor-col2"></th>
+                            </tr>
+                            <tr>
+                                <td>Mã Khách hàng</td>
+                                <td>KH02</td>
+                                <td>Mã nhân viên</td>
+                                <td>NV1</td>
+                            </tr>
+                            <tr>
+                                <td>Tên khách hàng</td>
+                                <td>Phạm Thị Huyền Nhung</td>
+                                <td>Tên nhân viên</td>
+                                <td>Võ Thùy Phương Trúc</td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ nhận</td>
+                                <td>Linh Trung, Thủ Đức, TP.HCM</td>
+                                <td style="font-weight: 600;">Tình trạng</td>
+                                <td style="color: rgba(34, 139, 34, 0.8); font-weight: 600;">Đã thanh toán</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+        
+                    <table class="invoice-table">
+                        <tr>
+                            <th class="masp">Mã SP</th>
+                            <th class="img-sp">Hình ảnh</th>
+                            <th class="name-sp">Tên sản phẩm</th>
+                            <th class="sl-sp">Số lượng</th>
+                            <th class="dg-sp">Đơn giá</th>
+                        </tr>
+                        <tr>
+                            <td>SP01</td>
+                            <td><img src="https://shopdunk.com/images/thumbs/0008056_space-black_550.webp"/></td>
+                            <td>iPhone 14 Pro Max 128GB</td>
+                            <td>1</td>
+                            <td>26.000.000 VNĐ</td>
+                        </tr>
+                        <tr>
+                            <td>SP01</td>
+                            <td><img src="https://shopdunk.com/images/thumbs/0008056_space-black_550.webp"/></td>
+                            <td>iPhone 14 Pro Max 128GB</td>
+                            <td>1</td>
+                            <td>26.000.000 VNĐ</td>
+                        </tr>
+                    </table>
+        
+                    <div class="footer">Tổng tiền: 100.000.000 VNĐ</div>
+                </div>
+        </div>
+    </body>
+</html>
