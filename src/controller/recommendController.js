@@ -20,7 +20,7 @@ export const recommendProducts = async (req, res) => {
       }
       products.push(product)
     })
-    console.log(products)
+    // console.log(products)
     //Dữ liệu lịch sử mua hàng của người dùng
     let purchaseHistory = [];
 

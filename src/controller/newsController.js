@@ -3,17 +3,17 @@ import News from "../models/news.js";
 import { createClient } from "redis";
 let redisClient;
 
-(async () => {
-    redisClient = createClient({
-        url: "redis://redis:6379",
-    });
+// (async () => {
+//     redisClient = createClient({
+//         url: "redis://redis:6379",
+//     });
 
-    redisClient.on("error", (error) =>
-        console.error(`Redis Client Error : ${error}`)
-    );
+//     redisClient.on("error", (error) =>
+//         console.error(`Redis Client Error : ${error}`)
+//     );
 
-    await redisClient.connect();
-})();
+//     await redisClient.connect();
+// })();
 
 // slug converter
 function removeVietnameseTones(str) {
