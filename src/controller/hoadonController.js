@@ -57,14 +57,11 @@ export const hello = async(req, res) => {
 }
 
 export const addHoaDon = async(req, res) => {
-    // const {madh, manv, ngayxuathd} = req.body
     const {madh, manv} = req.body
     const donhang = await Order.findOne({madh:madh}) 
     const products = donhang.products
     const khachhang = await KhachHang.findOne({makh:donhang.makh})
-    const diachigiaohang = khachhang?.diachinhanhang?.diachi
-
-    const nhanvien = manv?await NhanVien.findOne({manv: manv}):null
+    // const diachigiaohang = khachhang?.diachinhanhang[0]?.diachi
 
     // Lấy ngày giờ: lúc thêm hóa đơn
     const currentDate = new Date();
@@ -89,14 +86,13 @@ export const addHoaDon = async(req, res) => {
         mahd: newMAHD || "HD01",
         makh: donhang.makh,
         manv: manv,
-        // ngayxuathd: ngayxuathd,
         ngayxuathd: formattedDate,
         trigia: donhang.tongtrigia,
-        diachigiaohang: diachigiaohang,
+        diachigiaohang: donhang.address,
     }
     try {
         const hoadon = new HoaDon(hoadonData)
-        await hoadon.save()
+        // await hoadon.save()
         // console.log(hoadonData.mahd)
         // console.log(ngayxuathd)
         // console.log(khachhang)

@@ -2,24 +2,10 @@ import nodemailer from 'nodemailer'
 import dotenv from "dotenv";
 dotenv.config();
 import Product from "../models/product.js"
-// const nodemailer = require("nodemailer");
-// const Car=require('../models/car')
+
 // email,hoadon,cthds
 const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia) => {
     try{
-        // let valueInvoiceString=``
-        // for(var item of cthds){
-        //     const car=await Car.findOne({macar: item.macar})
-        //     valueInvoiceString=valueInvoiceString+`
-        //     <tr style="text-align:center;">
-        //     <td style=" border: 1px solid #ddd;" >${item.macar}</td>
-        //     <td style=" border: 1px solid #ddd;" >${car.ten}</td>
-        //     <td style=" border: 1px solid #ddd;" >${car.gia.toLocaleString()} VNĐ</td>
-        //     <td style=" border: 1px solid #ddd;" >${item.soluong}</td>
-        //     </tr>
-        //     `
-        // }
-
         let valueInvoiceString=``
         let index = 1
         for(var item of products){
@@ -45,6 +31,8 @@ const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia) =>
             pass: process.env.PASSMAIL
         },
     });
+    let src = "./logo.png"
+    let logoImg = `<img class="logo" src="https://firebasestorage.googleapis.com/v0/b/se347-ce5f6.appspot.com/o/logo.png?alt=media&token=72f0a958-9bb2-4e13-8f44-e2dd65f7f510">`
     transporter.sendMail({
         from: process.env.SHOPEMAIL, 
         to: `${khachhang.email}`, 
@@ -225,7 +213,7 @@ const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia) =>
                                 <tr>
                                     <td class="title">Hóa Đơn</td>
                                     <td><div class="empty"></div></td>
-                                    <td class="last-td"> <img class="logo" src="https://lh3.googleusercontent.com/pw/AJFCJaVmJtcoQw47_lUYqDne14jIJlSXwaWDHpPdNTQ03qnfGRewBGP5BKt5zZl3u_sct6jxP8zMNoL5AZxpyr4fv4B_5F6mhbwvHzWhhZt8fiH0cw0_-KzRDk1tDOBxuRSuLh8FNx9joAOHipKR-2swfahXEEDXuE2RCEuQoJBpdbbupvqvW_Vv917pE5n--QmV1zurw4dGn7PYVtbqoCyF1SkS2zvlWNUoitIc6wUHLG8hWGG23KfCyz0VUY1HdzdzTksTWV0uMwfJch6CaqjHtY2jhsvwourKxCg7mlu5X6K11ZDw2Vht9CtVU17rnACN9WVvmCmlctqQdNf_fx2D-jTmrWQANF4Q8NzPvX6ygGWKtpHKZ_sMxTAsNdJ5An8jKs73l2lq_v2XX98nKBpbJTHKjpbQqmnTJxVOohNeva4TYPbq2ymm57y2UzFujGSWYdDZqhRtN0OtIDYcJqJ0PymyBTW8d99ldFnojWoDJ9zRoYc5O4LlFzkBoB9Q0R0gmtBEU0_h21InSOpFJcxti9_R5VMBePlS3L3IlEtZzIOGATSTv3keST1UhuAuU19kqmgMZBBZ1LHv815Y_DE0jegkUz4y46MdD-nyDzUksvUOUhY-f2xMhP1ulwxGFt05dR0U4beeU5ZLVhT5WIPd1ul2DLaFm6cGUTDpOIVl4nGpSYfLIvVw38nJnw-52m6-SAA7ps9BMaMKzR0aqekTLwsL6-Gw0FmdRC96lKfaNSQGkOJzr1YBzvAkpfXBSTdEyKOBm0c56XlRllnzz-lulBLIkQzYwcClyrxRehJ5bnxSLYdpcDZaifH_YnGzqrZ8e0RE9Gs-sTTnUJtGZudr49uBCko-elXpDBQnZreGaSNSaqsiq39FP2oRxpOD914KSOpP9MjM9Dm8XHAz00_IEtOB3XfJqMl98OLuNmKG_EMwIHcPTV-cOK5v5P710Q=w860-h225-s-no?authuser=0"></td>
+                                    <td class="last-td">${logoImg}</td>
                                 </tr>
                             </table>
                             <table class="date-mahd">
