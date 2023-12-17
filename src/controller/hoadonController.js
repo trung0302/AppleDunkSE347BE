@@ -92,7 +92,7 @@ export const addHoaDon = async(req, res) => {
     }
     try {
         const hoadon = new HoaDon(hoadonData)
-        // await hoadon.save()
+        await hoadon.save()
         // console.log(hoadonData.mahd)
         // console.log(ngayxuathd)
         // console.log(khachhang)
