@@ -4,7 +4,7 @@ dotenv.config();
 import Product from "../models/product.js"
 
 // email,hoadon,cthds
-const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia) => {
+const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia, address) => {
     try{
         let valueInvoiceString=``
         let index = 1
@@ -240,7 +240,7 @@ const invoiceEmail = async(mahd, ngayxuathd, khachhang, products, tongtrigia) =>
                                     </tr>
                                     <tr>
                                         <td>Địa chỉ nhận hàng</td>
-                                        <td>${khachhang?.diachinhanhang[0].diachi}</td>
+                                        <td>${ address || "Không có"}</td>
                                     </tr>
                                     
                                 </table>

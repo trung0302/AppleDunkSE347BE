@@ -99,10 +99,10 @@ export const addHoaDon = async(req, res) => {
         // console.log(nhanvien)
         // console.log(products)
 
-        let sendmail = await invoiceEmail(hoadonData.mahd, hoadonData.ngayxuathd, khachhang, products, donhang.tongtrigia);
+        let sendmail = await invoiceEmail(hoadonData.mahd, hoadonData.ngayxuathd, khachhang, products, donhang.tongtrigia, donhang.address);
         res.send(hoadon)
     } catch(e){
-        res.status(500).send(e)
+        res.status(500).send("Lỗi" + e.message)
     }
 }
 

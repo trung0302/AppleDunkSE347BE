@@ -1,5 +1,4 @@
-import * as tf from '@tensorflow/tfjs'
-import '@tensorflow/tfjs-node'
+
 import Products from '../models/product.js';
 import Order from '../models/order.js';
 import KhachHang from '../models/khachhang.js';
